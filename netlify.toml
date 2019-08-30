@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  functions = ".netlify/functions/"
+
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/redirect"
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/static/robots.txt"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/static/wp-login.php"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/:code"
+  to = "/.netlify/functions/redirect/:code"
+  status = 200
+  force = true
