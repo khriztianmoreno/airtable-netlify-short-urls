@@ -1,4 +1,4 @@
-# airtable-netlify-short-urls
+# Airtable Netlify Short Urls
 
 This is a simple short-url service that works with
 [netlify functions](https://www.netlify.com/docs/functions/) and uses
@@ -16,7 +16,7 @@ a column for the short code and one for the long link.
 
 Next deploy this github repo to netlify:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kentcdodds/airtable-netlify-short-urls)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/khriztianmoreno/airtable-netlify-short-urls)
 
 Then set the following environment variables in netlify:
 
@@ -28,6 +28,7 @@ AIRTABLE_TABLE -> URLs
 AIRTABLE_SHORT_CODE_FIELD -> Short Code
 AIRTABLE_LONG_LINK_FIELD -> Long Link
 ENABLE_CACHE -> false
+URL_BASE -> https://example.com/.netlify/functions/redirect/
 ```
 
 > Note: `AIRTABLE_TABLE`, `AIRTABLE_SHORT_CODE_FIELD`,

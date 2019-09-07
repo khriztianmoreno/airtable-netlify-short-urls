@@ -31,6 +31,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       headers: {
         'Content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({shortUrl}),
     }
@@ -39,6 +40,7 @@ exports.handler = async (event, context) => {
       statusCode: 500,
       headers: {
         'Content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({err: error}),
     }
