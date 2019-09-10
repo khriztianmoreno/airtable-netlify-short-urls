@@ -45,7 +45,7 @@ shouldn't have to do anything there.
 
 Now go ahead and test that your redirects are working as expected. Just go to
 the short URL version of your netlify app and it should redirect you like so:
-http://jsair.netlify.com/first -> https://javascriptair.com/episodes/2015-12-09/
+http://ssoon.io/codeBase -> https://github.com/khriztianmoreno/ssoon-short-urls/
 
 If that works you're on the right track!
 
