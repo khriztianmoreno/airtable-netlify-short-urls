@@ -12,7 +12,7 @@
   "author": "Cristian Moreno <khriztianmoreno@gmail.com> (http://khriztianmoreno.dev/)",
   "license": "MIT",
   "devDependencies": {
-    "netlify-lambda": "1.6.3"
+    "netlify-lambda": "2.0.0"
   },
   "dependencies": {
     "airtable": "0.8.1",
