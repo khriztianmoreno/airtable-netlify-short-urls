@@ -13,12 +13,6 @@
   force = true
 
 [[redirects]]
-  from = "/wp-login.php"
-  to = "/static/wp-login.php"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/:code"
   to = "/.netlify/functions/redirect/:code"
   status = 200
