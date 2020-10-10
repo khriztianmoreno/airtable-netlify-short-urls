@@ -2,6 +2,9 @@
   command = "npm run build"
   functions = ".netlify/functions/"
 
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
 [[redirects]]
   from = "/"
   to = "/.netlify/functions/redirect"
