@@ -27,13 +27,13 @@ exports.handler = async (event, context) => {
 
   try {
     const shortUrl = await shorten(longLink, code)
+    console.log('exports.handler -> shortUrl', shortUrl)
     return {
       statusCode: 200,
       headers: {
-        'Content-type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-      body: JSON.stringify({shortUrl}),
+      body: JSON.stringify({ shortUrl }),
     }
   } catch (error) {
     return {
