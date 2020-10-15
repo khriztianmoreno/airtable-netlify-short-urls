@@ -1,5 +1,4 @@
 require('dotenv').config()
-const fs = require('fs')
 
 const defaultRedirectURL = getEnv('DEFAULT_REDIRECT_URL')
 const cacheBusterCode = getEnv('CACHE_BUSTER_CODE', '_bust-cache')
@@ -8,6 +7,10 @@ const cacheBusterCode = getEnv('CACHE_BUSTER_CODE', '_bust-cache')
 // us avoid having to call airtable for the same link during that time.
 let fakeCache = {}
 const bustCache = () => (fakeCache = {})
+
+function getEnv(name, defaultValue) {
+  return process.env[name] || defaultValue
+}
 
 exports.handler = async (event, context) => {
   // just something for grouping the netlify logs for this run together
@@ -82,7 +85,6 @@ exports.handler = async (event, context) => {
       body,
       headers: {
         Location: longLink,
-        'Access-Control-Allow-Origin': '*',
         // this needs to be enabled... but I'm really struggling on how to make
         // it work properly...
         // 'Cache-Control': 'public, max-age=10080', // 10080 seconds is 1 week
@@ -97,8 +99,4 @@ exports.handler = async (event, context) => {
       },
     }
   }
-}
-
-function getEnv(name, defaultValue) {
-  return process.env[name] || defaultValue
 }

@@ -1,9 +1,6 @@
 [build]
-  command = "npm run build"
-  functions = ".netlify/functions/"
-
-[[plugins]]
-  package = "@netlify/plugin-functions-install-core"
+ command = "npm run build"
+  functions = ".netlify/functions"
 
 [[redirects]]
   from = "/"
