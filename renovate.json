@@ -1,6 +1,0 @@
-{
-  "extends": [
-    "config:base"
-  ],
-  "supportPolicy": ["lts_latest"]
-}

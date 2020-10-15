@@ -1,7 +1,6 @@
+require('dotenv').config()
 const {URL} = require('url')
 const Airtable = require('airtable')
-
-// dotenv.config({path: path.join(__dirname, '../.env')})
 
 const apiKey = getEnv('AIRTABLE_KEY')
 const base = getEnv('AIRTABLE_BASE')
